@@ -1,0 +1,32 @@
+name: Real-world user feedback
+description: Report successful or unsuccessful usage, especially after context compaction.
+title: "[Feedback] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Please share a small, non-sensitive reproduction. Never upload credentials, raw private agent logs, or proprietary source."
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Agent platform
+      options:
+        - Google Antigravity IDE
+        - Antigravity CLI
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Minimal task and environment
+      description: Include CLI and Python versions and relevant steps without private data.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Actual behavior versus expected behavior
+      description: Tell us whether correctness, continuity, tool calls or time changed; negative results welcome.
+    validations:
+      required: true
