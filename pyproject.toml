@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-continuity"
+version = "0.1.0"
+description = "Checkpoint agent tasks and search workspaces efficiently, including after context compaction."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Agent Continuity contributors"}]
+keywords = ["antigravity", "ai-agents", "context-compaction", "agent-skills", "coding-agents"]
+classifiers = ["Programming Language :: Python :: 3"]
+
+[project.scripts]
+agent-continuity = "agent_continuity.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_continuity*"]
